@@ -32,6 +32,27 @@ document.querySelectorAll('.nav-link').forEach(link => {
     });
 });
 
+// Smooth scrolling for logo
+document.querySelector('.logo').addEventListener('click', (e) => {
+    e.preventDefault();
+    const targetSection = document.querySelector('#home');
+    if (targetSection) {
+        const offsetTop = targetSection.offsetTop - 70;
+        window.scrollTo({
+            top: offsetTop,
+            behavior: 'smooth'
+        });
+    }
+
+    // Close mobile menu if open
+    navMenu.classList.remove('active');
+
+    // Clear all active nav links (we're on home section)
+    document.querySelectorAll('.nav-link').forEach(navLink => {
+        navLink.classList.remove('active');
+    });
+});
+
 // CTA button smooth scroll
 document.querySelector('.cta-button').addEventListener('click', (e) => {
     e.preventDefault();
@@ -121,7 +142,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const isMessageValid = validateMessage();
 
             if (isEmailValid && isSubjectValid && isMessageValid) {
-                alert('Formularz jest poprawny! (Wysyłka zostanie dodana później)');
+                alert('Dzięuję za chęć kontaktu i przetesotwanie formularza! Strona aktulanie jest w trakcie tworzenia, skontaktuj się ze mną bezpośrednio za pomocą widocznego obok adresu email.');
             }
         });
     }
@@ -238,6 +259,16 @@ function copyEmail() {
 
 // Add some interactive hover effects
 document.querySelectorAll('.project-card').forEach(card => {
+    card.addEventListener('mouseenter', () => {
+        card.style.transform = 'translateY(-8px)';
+    });
+
+    card.addEventListener('mouseleave', () => {
+        card.style.transform = 'translateY(-5px)';
+    });
+});
+
+document.querySelectorAll('.experience-highlight').forEach(card => {
     card.addEventListener('mouseenter', () => {
         card.style.transform = 'translateY(-8px)';
     });

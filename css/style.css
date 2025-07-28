@@ -50,6 +50,12 @@ body {
     font-size: 1.5rem;
     font-weight: 700;
     color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.logo:hover {
+    color: var(--secondary-color);
 }
 
 .nav-menu {
@@ -162,7 +168,7 @@ body {
     border-radius: 2px;
 }
 
-/* About Section */
+/* About Section - NOWA WERSJA */
 .about-content {
     display: flex;
     flex-direction: column;
@@ -171,23 +177,48 @@ body {
 
 .about-intro {
     text-align: center;
-    max-width: 800px;
-    margin: 0 auto;
+    max-width: 900px;
+    margin: 0 auto 2rem auto;
 }
 
 .about-text {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     line-height: 1.8;
     color: var(--text-light);
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
     margin-bottom: 2rem;
 }
 
 .experience-highlight {
     background: var(--bg-white);
-    padding: 2rem;
-    border-radius: 12px;
+    padding: 1.5rem;
+    border-radius: 8px;
     box-shadow: var(--shadow);
-    margin-bottom: 2rem;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.experience-highlight:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px -2px rgba(0, 0, 0, 0.08);
+}
+
+.experience-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin: 0;
+    margin-bottom: 1rem;
+}
+
+.experience-highlight p {
+    color: var(--text-light);
+    margin-bottom: 1rem;
+    line-height: 1.5;
 }
 
 .experience-title {
@@ -195,6 +226,15 @@ body {
     font-weight: 600;
     color: var(--primary-color);
     margin-bottom: 1rem;
+}
+
+.about-footer {
+    text-align: center;
+    background: var(--bg-light);
+    padding: 2rem;
+    border-radius: 12px;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 /* Projects Section */
@@ -442,6 +482,10 @@ body {
     }
 
     .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-grid {
         grid-template-columns: 1fr;
     }
 }
