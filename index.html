@@ -3,322 +3,238 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>niedzwieckim</title>
+    <title>Maciej Niedźwiecki</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
+    <div class="bg-gradient"></div>
+
+    <nav id="navbar">
+        <div class="container">
             <a href="#home" class="logo">niedzwieckim</a>
-            <ul class="nav-menu">
-                <li><a href="#about" class="nav-link">O mnie</a></li>
-                <li><a href="#achievements" class="nav-link">Osiągnięcia</a></li>
-                <li><a href="#projects" class="nav-link">Projekty</a></li>
-                <li><a href="#contact" class="nav-link">Kontakt</a></li>
+            <ul>
+                <li><a href="#projects">Portfolio</a></li>
+                <li><a href="#education">Wykształcenie</a></li>
+                <li><a href="#publications">Badania</a></li>
+                <li><a href="#contact">Kontakt</a></li>
             </ul>
-            <button class="mobile-menu-btn">☰</button>
         </div>
     </nav>
 
-    <!-- Hero Section -->
     <section id="home" class="hero">
-        <div class="hero-content fade-in">
-            <h1 class="hero-title">Maciej Niedźwiecki</h1>
-            <p class="hero-subtitle">Konsultant ds. wdrożeń BSS | Inżynier Telekomunikacji</p>
-            <p class="hero-description">
-                Absolwent Elektroniki i Telekomunikacji ze specjalizacją w technologiach mobilnych i bezprzewodowych.
-                Doświadczenie we wdrażaniu systemów BSS, monitoringu sieci telekomunikacyjnych oraz projektach badawczych 5G/6G.
-            </p>
-            <a href="#contact" class="cta-button">Skontaktuj się ze mną</a>
+        <div class="container">
+            <div class="hero-content">
+                <h1>
+                    Buduję <span class="gradient-text">aplikacje</span> i automatyzuję <span class="gradient-text">pomiary RF</span>
+                </h1>
+                <p class="hero-description">
+                    Inżynier telekomunikacji z pasją do programowania. Specjalizuję się w technologiach 5G/6G, automatyzacji pomiarów i tworzeniu aplikacji.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">Zobacz projekty →</a>
+                    <a href="#contact" class="btn btn-secondary">Skontaktuj się</a>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="section">
-        <h2 class="section-title fade-in">O mnie</h2>
-        <div class="about-content">
-            <div class="about-intro fade-in">
-                <p class="about-text">
-                    Jestem absolwentem Elektroniki i Telekomunikacji z Politechniki Poznańskiej, obecnie pracuję jako
-                    Konsultant ds. wdrożeń w Comarch. Specjalizuję się w technologiach telekomunikacyjnych,
-                    szczególnie w systemach BSS oraz sieciach 5G/6G.
+    <section id="projects">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Portfolio</span>
+                <h2 class="section-title">Wyróżnione Projekty</h2>
+                <p class="section-description">
+                    Od aplikacji mobilnych po systemy pomiarowe RF - projekty, które pozwoliły mi rozwinąć umiejętności w zakresie telekomunikacji i programowania.
                 </p>
             </div>
 
-            <div class="about-grid fade-in">
-                <div class="experience-highlight">
-                    <h3 class="experience-title">Doświadczenie zawodowe</h3>
-                    <p>W Comarch zajmuję się kompleksowym wdrażaniem systemów BSS, konsultingiem technicznym dla klientów zagranicznych,
-                    testowaniem oprogramowania oraz projektowaniem raportów biznesowych w JasperReports. Rozwijam skrypty bazodanowe
-                    w PL/SQL i weryfikuję interfejsy API.</p>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-icon">📱</div>
+                    <h3>SimplyDo - Menedżer Zadań iOS</h3>
+                    <p>Minimalistyczna aplikacja iOS do zarządzania zadaniami. Obsługuje tworzenie, edycję i filtrowanie zadań z intuicyjnymi gestami. Wykorzystuje SwiftUI i SwiftData do persistencji danych. Interfejs zaprojektowany w Figma.</p>
+                    <div class="project-tags">
+                        <span class="tag">Swift</span>
+                        <span class="tag">Figma</span>
+                        <span class="tag">UI/UX</span>
+                    </div>
+                    <a href="https://github.com/maciejniedzwiecki/Electronics-and-Telecommunications/tree/master/SimplyDo%20-%20iOS%20Task%20Manager" class="project-link" target="_blank">Zobacz na GitHub →</a>
                 </div>
 
-                <div class="experience-highlight">
-                    <h3 class="experience-title">Wcześniejsze doświadczenie</h3>
-                    <p>Wcześniej pracowałem jako Operator NOC w Hawe Telekom, gdzie monitorowałem ogólnopolską sieć światłowodową
-                    za pomocą narzędzi takich jak Zabbix, Cacti i iMaster NCE. Identyfikowałem awarie, koordynowałem prace serwisowe
-                    oraz zapewniałem wsparcie dla klientów.</p>
+                <div class="project-card">
+                    <div class="project-icon">📊</div>
+                    <h3>Dashboard Analityczny dla USRP</h3>
+                    <p>Webowy dashboard do wizualizacji sygnałów radiowych z urządzeń USRP.  Umożliwia monitoring widma w czasie rzeczywistym z analizą mocy kanałów. Wizualizacja przez wykresy 2D/3D z filtrowaniem danych. Zbudowany w Dash z MongoDB Atlas.</p>
+                    <div class="project-tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">Dash</span>
+                        <span class="tag">MongoDB</span>
+                    </div>
+                    <a href="https://github.com/maciejniedzwiecki/Electronics-and-Telecommunications/tree/master/USRP%20Control%20and%20Analysis%20Interface" class="project-link" target="_blank">Zobacz na GitHub →</a>
                 </div>
 
-                <div class="experience-highlight">
-                    <h3 class="experience-title">Badania naukowe</h3>
-                    <p>Na studiach prowadziłem badania nad propagacją fal milimetrowych, które zaowocowały publikacją na konferencji MIKON 2024.
-                    Analizowałem tłumienność materiałów budowlanych dla częstotliwości 18-30 GHz, co jest kluczowe dla rozwoju sieci 5G i 6G.</p>
+                <div class="project-card">
+                    <div class="project-icon">📡</div>
+                    <h3>Automatyzacja Pomiarów RF</h3>
+                    <p>Skrypt w Python automatyzujący pomiary widma z urządzeniami R&S. Synchronizuje generator i analizator przez protokół SCPI. Automatyczny sweep z detekcją i zapisem maksimów do CSV oraz wizualizacją wielu pomiarów na wspólnym wykresie.</p>
+                    <div class="project-tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">SCPI</span>
+                        <span class="tag">Matplotlib</span>
+                    </div>
+                    <a href="https://github.com/maciejniedzwiecki/RS-Measurement-Scripts" class="project-link" target="_blank">Zobacz na GitHub →</a>
                 </div>
             </div>
 
-
+            <div class="github-cta">
+                <p class="github-cta-text">
+                    Wszystkie projekty i kody źródłowe znajdziesz w moich repozytoriach na GitHubie, zorganizowane według katalogów tematycznych.
+                </p>
+                <a href="https://github.com/maciejniedzwiecki" class="btn btn-primary" target="_blank">
+                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24" style="margin-right: 0.5rem;">
+                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                    </svg>
+                    Zobacz wszystkie repozytoria
+                </a>
+            </div>
         </div>
     </section>
 
-    <!-- Achievements Section -->
-    <section id="achievements" class="section" style="background: var(--bg-white);">
-        <h2 class="section-title fade-in">Osiągnięcia</h2>
+    <section id="education">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Wykształcenie</span>
+                <h2 class="section-title">Edukacja & Certyfikaty</h2>
+                <p class="section-description">
+                    Solidne fundamenty techniczne z Politechniki Poznańskiej połączone z certyfikacjami branżowymi w telekomunikacji mobilnej.
+                </p>
+            </div>
 
-        <div style="display: grid; grid-template-columns: 1fr; gap: 2rem; max-width: 900px; margin: 0 auto;">
-            <!-- Publication Achievement -->
-            <div class="achievement-card fade-in" style="background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%); padding: 2.5rem; border-radius: 12px; border-left: 5px solid var(--primary-color); box-shadow: var(--shadow);">
-                <div style="display: flex; align-items: start; gap: 1.5rem;">
-                    <div style="font-size: 3rem; color: var(--primary-color);">📄</div>
-                    <div style="flex: 1;">
-                        <h3 style="font-size: 1.4rem; font-weight: 700; color: var(--text-dark); margin-bottom: 0.5rem;">
-                            Publikacja naukowa MIKON 2024
-                        </h3>
-                        <p style="font-size: 1rem; color: var(--primary-color); font-weight: 600; margin-bottom: 1rem;">
-                            "Measurements of Material Loss and Floor Penetration for 18-30 GHz"
-                        </p>
-                        <p style="color: var(--text-light); line-height: 1.6; margin-bottom: 1.5rem;">
-                            Publikacja wyników badań propagacji fal milimetrowych przez materiały budowlane i piętra budynków.
-                            Badanie eksperymentalne dla częstotliwości 18-30 GHz, kluczowych dla sieci 5G i przyszłych 6G.
-                            Pomiary wykazały znaczne różnice w stratach propagacji (2-67 dB dla materiałów, 31-49 dB dla pieter).
-                        </p>
-                        <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
-                            <span class="tech-tag">Konferencja MIKON</span>
-                            <span class="tech-tag">Pierwszy autor</span>
-                            <span class="tech-tag">5G/6G Research</span>
-                            <span class="tech-tag">RF Measurements</span>
-                        </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <h3>Magister Inżynier - Elektronika i Telekomunikacja</h3>
+                    <span class="timeline-period">Politechnika Poznańska</span>
+                    <p>Studia magisterskie na kierunku Elektronika i Telekomunikacja ze specjalizacją w systemach radiokomunikacyjnych. Praktyczne doświadczenie w technologiach 5G/6G, pomiarach propagacji mmWave oraz automatyzacji pomiarów RF.</p>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <h3>Certyfikat - Systemy Telekomunikacji 5G i 5G Advanced</h3>
+                    <span class="timeline-period">Nokia</span>
+                    <p>Certyfikat Nokia "Podstawy Systemów Telekomunikacji Mobilnej 5G i 5G Advanced" obejmujący propagację radiową, systemy antenowe MIMO, architekturę sieci i protokoły komunikacyjne.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="publications">
+        <div class="container">
+
+            <div class="section-header">
+                <span class="section-label">Badania</span>
+                <h2 class="section-title">Publikacje & Badania</h2>
+                <p class="section-description">
+                    Eksperymentalne badania nad technologiami 5G/6G - od analizy propagacji fal milimetrowych po rekonfigurowalne matryce antenowe.
+                </p>
+            </div>
+
+            <div class="publication-list">
+                <div class="publication-card">
+                    <h3>Charakterystyka Propagacji mmWave przez Struktury Budowlane</h3>
+                    <p class="publication-journal">MIKON 2024 - 25. Międzynarodowa Konferencja Mikrofalowa i Radarowa</p>
+                    <p>Badania propagacji fal milimetrowych przez materiały budowlane i piętra budynków dla częstotliwości 18-30 GHz. Pomiary wykazały znaczną różnorodność strat - od 2 do 67 dB dla różnych materiałów oraz 31-49 dB dla penetracji pięter. Wyniki są kluczowe dla projektowania pokrycia indoor sieci 5G/6G, szczególnie w kontekście nowoczesnych okien energooszczędnych IRR.</p>
+                    <div class="project-tags" style="margin-top: 1.5rem;">
+                        <span class="tag">5G/6G</span>
+                        <span class="tag">Propagacja RF</span>
+                        <span class="tag">mmWave</span>
                     </div>
                 </div>
-            </div>
 
-            <!-- Nokia Certification -->
-            <div class="achievement-card fade-in" style="background: linear-gradient(135deg, #fef7ff 0%, #fae8ff 100%); padding: 2.5rem; border-radius: 12px; border-left: 5px solid #8b5cf6; box-shadow: var(--shadow);">
-                <div style="display: flex; align-items: start; gap: 1.5rem;">
-                    <div style="font-size: 3rem; color: #8b5cf6;">🏆</div>
-                    <div style="flex: 1;">
-                        <h3 style="font-size: 1.4rem; font-weight: 700; color: var(--text-dark); margin-bottom: 0.5rem;">
-                            Certyfikat Nokia 5G & 5G Advanced
-                        </h3>
-                        <p style="font-size: 1rem; color: #8b5cf6; font-weight: 600; margin-bottom: 1rem;">
-                            Podstawy Systemów Telekomunikacji Mobilnej 5G i 5G Advanced • Czerwiec 2024
-                        </p>
-                        <p style="color: var(--text-light); line-height: 1.6; margin-bottom: 1.5rem;">
-                            Oficjalny certyfikat Nokia obejmujący kluczowe aspekty technologii 5G: propagację radiową,
-                            systemy antenowe MIMO, architekturę sieci oraz wybrane protokoły komunikacyjne.
-                            Certyfikat potwierdza znajomość fundamentów technologii mobilnych najnowszej generacji.
-                        </p>
-                        <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
-                            <span class="tech-tag">Nokia</span>
-                            <span class="tech-tag">5G Technology</span>
-                            <span class="tech-tag">MIMO Systems</span>
-                            <span class="tech-tag">Network Architecture</span>
-                        </div>
+                <div class="publication-card">
+                    <h3>Projektowanie Codebooka dla Rekonfigurowalnych Matryc Antenowych (RIS)</h3>
+                    <p class="publication-journal">Poster Konferencyjny - Politechnika Poznańska</p>
+                    <p>Podejście do projektowania codebooka dla rekonfigurowalnych matryc antenowych (RIS) z wykorzystaniem informacji o pozycji. Badania pomiarowe przeprowadzone na otwartej przetrzeni wykazały możliwość znacznej redukcji rozmiaru codebooka przy minimalnej degradacji mocy odbieranego sygnału. Wyniki wskazują na efektywność redukcji przestrzeni poszukiwań wzorców odbicia RIS o około 80% przy zachowaniu jakości łącza.</p>
+                    <div class="project-tags" style="margin-top: 1.5rem;">
+                        <span class="tag">RIS</span>
+                        <span class="tag">5G/6G</span>
+                        <span class="tag">Beamforming</span>
                     </div>
                 </div>
-            </div>
-        </div>
 
-        <!-- Academic Recognition -->
-        <div class="achievements-footer fade-in" style="text-align: center; margin-top: 3rem; padding: 2rem; background: var(--bg-light); border-radius: 12px; max-width: 700px; margin-left: auto; margin-right: auto; margin-top: 3rem;">
-            <h3 style="color: var(--text-dark); margin-bottom: 1rem; font-size: 1.2rem;">🎓 Wykształcenie</h3>
-            <p style="color: var(--text-light); line-height: 1.6;">
-                <strong>Politechnika Poznańska</strong><br>
-                Studia Inżynierskie: Elektronika i Telekomunikacja (2020-2024)<br>
-                Studia Magisterskie: Elektronika i Telekomunikacja (2024-2025)
-            </p>
+                <div class="github-cta">
+                <p class="github-cta-text">
+                    Chcesz zagłębić się w szczegóły? Wszystkie publikacje, prace badawcze i materiały techniczne są dostępne w moim repozytorium.
+                </p>
+                <a href="https://github.com/maciejniedzwiecki/Theses-and-Publications" class="btn btn-primary" target="_blank">
+                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24" style="margin-right: 0.5rem;">
+                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                    </svg>
+                    Zobacz publikacje i prace badawcze
+                </a>
+            </div>
+
+            </div>
         </div>
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="section">
-        <h2 class="section-title fade-in">Doświadczenie techniczne</h2>
-        <div class="projects-intro fade-in" style="text-align: center; margin-bottom: 3rem; max-width: 800px; margin-left: auto; margin-right: auto;">
-            <p style="font-size: 1.1rem; color: var(--text-light); line-height: 1.7;">
-                Przegląd projektów studenckich i badawczych, które pozwoliły mi nabyć doświadczenie z różnymi technologiami.
-                Kod i materiały dostępne w repozytorium na GitHubie.
-            </p>
-        </div>
-
-        <div class="projects-grid">
-            <div class="project-card fade-in">
-                <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
-                    <span style="font-size: 2rem;">📱</span>
-                    <h3 style="font-size: 1.2rem; font-weight: 600; color: var(--text-dark); margin: 0;">Aplikacje mobilne iOS</h3>
-                </div>
-                <p style="color: var(--text-light); margin-bottom: 1rem; line-height: 1.5;">
-                    Podstawowe aplikacje mobilne z interfejsami użytkownika i prostymi funkcjonalnościami.
+    <section id="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Kontakt</span>
+                <h2 class="section-title">Skontaktuj się</h2>
+                <p class="section-description">
+                    Szukasz specjalisty ds. telekomunikacji, masz ciekawy projekt badawczy lub chcesz omówić możliwości współpracy? Napisz do mnie!
                 </p>
-                <div class="project-tech">
-                    <span class="tech-tag">iOS</span>
-                    <span class="tech-tag">Mobile Dev</span>
-                </div>
             </div>
 
-            <div class="project-card fade-in">
-                <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
-                    <span style="font-size: 2rem;">📊</span>
-                    <h3 style="font-size: 1.2rem; font-weight: 600; color: var(--text-dark); margin: 0;">Wizualizacje LoRa</h3>
-                </div>
-                <p style="color: var(--text-light); margin-bottom: 1rem; line-height: 1.5;">
-                    Dashboardy w Dash (Python) i Grafana do wyświetlania danych z czujników IoT.
-                </p>
-                <div class="project-tech">
-                    <span class="tech-tag">Python</span>
-                    <span class="tech-tag">Dash</span>
-                    <span class="tech-tag">Grafana</span>
-                </div>
-            </div>
+            <div class="contact-content">
+                <form>
+                    <div class="form-group">
+                        <label for="name">Imię i nazwisko</label>
+                        <input type="text" id="name" name="name" placeholder="Jan Kowalski" required>
+                    </div>
 
-            <div class="project-card fade-in">
-                <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
-                    <span style="font-size: 2rem;">⚡</span>
-                    <h3 style="font-size: 1.2rem; font-weight: 600; color: var(--text-dark); margin: 0;">Dashboard USRP</h3>
-                </div>
-                <p style="color: var(--text-light); margin-bottom: 1rem; line-height: 1.5;">
-                    Interfejs do kontroli urządzeń USRP i podstawowej analizy sygnałów radiowych.
-                </p>
-                <div class="project-tech">
-                    <span class="tech-tag">USRP</span>
-                    <span class="tech-tag">GNU Radio</span>
-                    <span class="tech-tag">Python</span>
-                </div>
-            </div>
+                    <div class="form-group">
+                        <label for="email">Adres email</label>
+                        <input type="email" id="email" name="email" placeholder="jan@example.com" required>
+                    </div>
 
-            <div class="project-card fade-in">
-                <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
-                    <span style="font-size: 2rem;">🔬</span>
-                    <h3 style="font-size: 1.2rem; font-weight: 600; color: var(--text-dark); margin: 0;">Symulacje elektroniczne</h3>
-                </div>
-                <p style="color: var(--text-light); margin-bottom: 1rem; line-height: 1.5;">
-                    Projekty w LTSpice, LabVIEW oraz MATLAB do analizy obwodów i systemów.
-                </p>
-                <div class="project-tech">
-                    <span class="tech-tag">LTSpice</span>
-                    <span class="tech-tag">LabVIEW</span>
-                    <span class="tech-tag">MATLAB</span>
-                </div>
-            </div>
+                    <div class="form-group">
+                        <label for="message">Wiadomość</label>
+                        <textarea id="message" name="message" placeholder="Formularz wkrótce będzie aktywny. Tymczasem zapraszam do kontaktu przez email lub LinkedIn!" required></textarea>
+<!--                        <textarea id="message" name="message" placeholder="Opisz swój projekt lub pytanie..." required></textarea>-->
+                    </div>
 
-            <div class="project-card fade-in">
-                <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
-                    <span style="font-size: 2rem;">💻</span>
-                    <h3 style="font-size: 1.2rem; font-weight: 600; color: var(--text-dark); margin: 0;">Programy w C++ / Python</h3>
-                </div>
-                <p style="color: var(--text-light); margin-bottom: 1rem; line-height: 1.5;">
-                    Proste programy do rozwiązywania problemów matematycznych i technicznych.
-                </p>
-                <div class="project-tech">
-                    <span class="tech-tag">C++</span>
-                    <span class="tech-tag">Python</span>
-                    <span class="tech-tag">Algorithms</span>
-                </div>
-            </div>
+                    <button type="submit" class="form-submit">Wyślij wiadomość</button>
+                </form>
 
-            <div class="project-card fade-in">
-                <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
-                    <span style="font-size: 2rem;">📡</span>
-                    <h3 style="font-size: 1.2rem; font-weight: 600; color: var(--text-dark); margin: 0;">Badania fal milimetrowych</h3>
-                </div>
-                <p style="color: var(--text-light); margin-bottom: 1rem; line-height: 1.5;">
-                    Praca inżynierska i publikacja MIKON 2024 - pomiary propagacji dla 5G/6G.
-                </p>
-                <div class="project-tech">
-                    <span class="tech-tag">5G/6G</span>
-                    <span class="tech-tag">RF Measurements</span>
-                    <span class="tech-tag">Publikacja</span>
-                </div>
-            </div>
-        </div>
-
-        <div class="projects-footer fade-in" style="text-align: center; margin-top: 3rem; background: var(--bg-light); padding: 2rem; border-radius: 12px;">
-            <h3 style="color: var(--text-dark); margin-bottom: 1rem;">Repozytorium GitHub</h3>
-            <p style="color: var(--text-light); margin-bottom: 2rem; line-height: 1.6;">
-                Wszystkie projekty studenckie i kody źródłowe znajdziesz w moim repozytorium<br>
-                <strong>Electronics-and-Telecommunications</strong> - organizowane według katalogów tematycznych
-            </p>
-            <a href="https://github.com/maciejniedzwiecki/Electronics-and-Telecommunications" class="cta-button" target="_blank" rel="noopener">
-                Zobacz repozytorium na GitHubie →
-            </a>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="section contact">
-        <h2 class="section-title fade-in">Kontakt</h2>
-        <div class="contact-content">
-            <div class="contact-info fade-in">
-                <h3>Skontaktuj się ze mną</h3>
-                <p style="color: var(--text-light); margin-bottom: 2rem; line-height: 1.6; max-width: 400px; margin-left: auto; margin-right: auto;">
-                    Szukasz doświadczonego inżyniera telekomunikacji? Potrzebujesz wsparcia we wdrażaniu systemów BSS
-                    lub projektach sieciowych? Napisz do mnie - chętnie omówimy możliwości współpracy.
-                </p>
-                <div class="contact-details">
-                    <a href="#" onclick="copyEmail()" class="contact-item" title="Kliknij aby skopiować adres email">
-                        <span>📧</span>
-                        <span>maciejniedzwiecki.01@gmail.com</span>
+                <div class="social-links">
+                    <a href="https://github.com/maciejniedzwiecki" class="social-link" title="GitHub" target="_blank">
+                        <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                        </svg>
                     </a>
-                    <a href="https://linkedin.com/in/maciej-niedzwiecki" target="_blank" rel="noopener" class="contact-item">
-                        <span>💼</span>
-                        <span>linkedin.com/in/maciej-niedzwiecki</span>
+                    <a href="https://www.linkedin.com/in/maciej-niedzwiecki" class="social-link" title="LinkedIn" target="_blank">
+                        <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                        </svg>
                     </a>
-                    <a href="https://github.com/maciejniedzwiecki" target="_blank" rel="noopener" class="contact-item">
-                        <span>⚡</span>
-                        <span>github.com/maciejniedzwiecki</span>
+                    <a href="mailto:maciejniedzwiecki.01@gmail.com" class="social-link" title="Email" target="_blank">
+                        <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                        </svg>
                     </a>
                 </div>
             </div>
-            <form class="contact-form fade-in" id="contact-form">
-                <div class="form-group">
-                    <label for="email" class="form-label">Twój email</label>
-                    <input type="email" id="email" name="email" class="form-input" placeholder="nazwa@example.com" required>
-                    <span class="error-message" id="email-error"></span>
-                </div>
-                <div class="form-group">
-                    <label for="subject" class="form-label">Czego dotyczy wiadomość?</label>
-                    <div class="select-wrapper">
-                        <select id="subject" name="subject" class="form-select" required>
-                            <option value="">Wybierz temat...</option>
-                            <option value="strony-internetowe">🌐 Strony internetowe</option>
-                            <option value="systemy-bss">📡 Systemy BSS / Telekomunikacja</option>
-                            <option value="badania-naukowe">🔬 Badania naukowe / 5G-6G</option>
-                            <option value="aplikacje-mobilne">📱 Aplikacje mobilne</option>
-                            <option value="wspolpraca-zawodowa">🤝 Współpraca zawodowa</option>
-                            <option value="inne">💬 Inne</option>
-                        </select>
-                    </div>
-                    <span class="error-message" id="subject-error"></span>
-                </div>
-                <div class="form-group">
-                    <label for="message" class="form-label">Wiadomość</label>
-                    <textarea id="message" name="message" class="form-textarea" placeholder="Opisz swój projekt lub zadaj pytanie..." required></textarea>
-                    <span class="error-message" id="message-error"></span>
-                </div>
-                <button type="submit" class="submit-btn" id="submit-btn">Wyślij wiadomość</button>
-            </form>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-content">
-            <p style="color: var(--text-light); font-size: 1rem; margin-bottom: 0.5rem;">
-                © 2025 Maciej Niedźwiecki
-            </p>
-            <p style="color: var(--text-light); opacity: 0.7; font-size: 0.9rem;">
-                Zbudowane z HTML, CSS i odrobiną JavaScript ✨
-            </p>
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Maciej Niedźwiecki</p>
+            <p style="margin-top: 0.5rem; font-size: 0.85rem;">Stworzone z pasją do telekomunikacji 💜</p>
         </div>
     </footer>
 
