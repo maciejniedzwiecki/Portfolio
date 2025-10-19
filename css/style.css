@@ -4,6 +4,12 @@
     box-sizing: border-box;
 }
 
+html, body {
+    width: 100%;
+    overflow-x: hidden;
+    position: relative;
+}
+
 :root {
     --violet: #8b5cf6;
     --violet-dark: #6d28d9;
@@ -23,7 +29,6 @@ body {
     background: var(--bg-primary);
     color: var(--text-primary);
     line-height: 1.7;
-    overflow-x: hidden;
 }
 
 html {
@@ -70,6 +75,8 @@ nav .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
+    z-index: 1002;
 }
 
 .logo {
@@ -83,10 +90,41 @@ nav .container {
     text-decoration: none;
     cursor: pointer;
     transition: filter 0.3s ease;
+    position: relative;
+    z-index: 1002;
 }
 
 .logo:hover {
     filter: brightness(0.85) saturate(1.2);
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    position: relative;
+    z-index: 1002;
+}
+
+.hamburger span {
+    width: 22px;
+    height: 2px;
+    background: var(--violet);
+    margin: 3px 0;
+    transition: all 0.3s ease;
+    border-radius: 2px;
+}
+
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(6px, 6px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
 }
 
 nav ul {
@@ -540,7 +578,38 @@ footer {
     background: white;
 }
 
+.mobile-text {
+    display: none;
+}
+
 @media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+
+    nav ul {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 100%;
+        height: 100vh;
+        background: white;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        transition: right 0.4s ease;
+        padding: 2rem;
+    }
+
+    nav ul.active {
+        right: 0;
+    }
+
+    nav a {
+        font-size: 1.4rem;
+    }
+
     .hero h1 {
         font-size: 2.8rem;
     }
@@ -553,8 +622,20 @@ footer {
         font-size: 2.2rem;
     }
 
-    nav ul {
-        display: none;
+    .section-description {
+        line-height: 1.6;
+    }
+
+    .section-header {
+        margin-bottom: 3rem;
+    }
+
+    section {
+        padding: 5rem 0;
+    }
+
+    #education {
+        padding-bottom: 1.2rem;
     }
 
     .projects-grid {
@@ -573,7 +654,32 @@ footer {
         padding-left: 50px;
     }
 
-    section {
-        padding: 5rem 0;
+    .github-cta {
+        margin-top: 3rem;
+        padding: 2rem 1.5rem;
+    }
+
+    .github-cta-text {
+        margin-bottom: 1.5rem;
+    }
+
+    .desktop-text {
+        display: none;
+    }
+
+    .mobile-text {
+        display: block;
+    }
+
+    footer {
+        padding: 2rem 1.5rem;
+    }
+
+    footer p {
+        font-size: 0.9rem;
+    }
+
+    .social-links {
+        margin-top: 2.5rem;
     }
 }

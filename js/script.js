@@ -8,6 +8,14 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 block: 'start'
             });
         }
+
+        // Zamknij menu po kliknięciu linku
+        const navMenu = document.querySelector('nav ul');
+        const hamburger = document.querySelector('.hamburger');
+        if (navMenu.classList.contains('active')) {
+            navMenu.classList.remove('active');
+            hamburger.classList.remove('active');
+        }
     });
 });
 
@@ -20,9 +28,17 @@ window.addEventListener('scroll', () => {
     }
 });
 
+// Hamburger menu toggle
+const hamburger = document.querySelector('.hamburger');
+const navMenu = document.querySelector('nav ul');
+
+hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    navMenu.classList.toggle('active');
+});
+
 document.querySelector('form').addEventListener('submit', function(e) {
     e.preventDefault();
     alert('Dziękuję za chęć kontaktu i przetestowanie formularza! Strona jest aktualnie w trakcie tworzenia – skontaktuj się ze mną bezpośrednio za pomocą email lub LinkedIn.');
-    //alert('Dziękuję za wiadomość! Odpowiem najszybciej jak to możliwe.');
     this.reset();
 });
