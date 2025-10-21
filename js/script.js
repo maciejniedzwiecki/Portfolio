@@ -37,8 +37,46 @@ hamburger.addEventListener('click', () => {
     navMenu.classList.toggle('active');
 });
 
-document.querySelector('form').addEventListener('submit', function(e) {
+document.querySelector('form[name="contact"]').addEventListener('submit', function(e) {
     e.preventDefault();
-    alert('Dziękuję za chęć kontaktu i przetestowanie formularza! Strona jest aktualnie w trakcie tworzenia – skontaktuj się ze mną bezpośrednio za pomocą email lub LinkedIn.');
-    this.reset();
+
+    const form = this;
+    const formData = new FormData(form);
+    const successMessage = document.getElementById('successMessage');
+    const submitButton = form.querySelector('.form-submit');
+
+    // Zablokuj przycisk podczas wysyłania
+    submitButton.disabled = true;
+    submitButton.textContent = 'Wysyłanie...';
+
+    fetch('/', {
+        method: 'POST',
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams(formData).toString()
+    })
+    .then(() => {
+        // Sukces
+        form.classList.add('form-hidden');
+        successMessage.classList.add('show');
+
+        // Ukryj po 3 sekundach i zresetuj
+        setTimeout(() => {
+            successMessage.classList.remove('show');
+
+            setTimeout(() => {
+                form.classList.remove('form-hidden');
+                form.reset();
+                submitButton.disabled = false;
+                submitButton.textContent = 'Wyślij wiadomość';
+            }, 400);
+        }, 3000);
+    })
+    .catch((error) => {
+        // Alert tylko dla błędu
+        alert('Ups! Coś poszło nie tak. Spróbuj ponownie lub napisz bezpośrednio na email: maciejniedzwiecki.01@gmail.com');
+
+        // Odblokuj formularz
+        submitButton.disabled = false;
+        submitButton.textContent = 'Wyślij wiadomość';
+    });
 });
